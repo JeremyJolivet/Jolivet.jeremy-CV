@@ -1,0 +1,169 @@
+body {
+    display: grid;
+    grid-template-columns: 6.5cm 0.5cm auto 0.5cm;
+    grid-template-rows: 5cm auto;
+    background: white;
+    margin: 0 auto;
+    width: 21cm;
+    height: 29.7cm;
+    /* A enlever pour print */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+#main {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+#IMGPERSO {
+    grid-column: 1;
+    grid-row: 1;
+    vertical-align: middle;
+    text-align: center;
+    padding-top: 0.5cm;
+    background-color: #0CBA52
+}
+
+#IMGPERSO img {
+    max-height: 4cm;
+    filter: grayscale(0) blur(0px);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#IMGPERSO img:hover {
+
+    -webkit-transform: rotate(360deg); /* rotation de l'image */
+    transform: rotate(360deg);
+    border-radius: 50%;
+}
+
+/*sidebar*/
+
+#sidebar {
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    background-color: #0CBA52;
+    color: white;
+}
+
+#sidebar h1 {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0.1cm;
+    font-size: 1em;
+    margin-bottom: 5px;
+    background-color: black;
+}
+
+#sidebar p {
+    padding: 0cm 0.3cm 0 0.3cm;
+    text-align: justify;
+}
+
+#Loisirs {
+    margin-top: auto;
+}
+
+#iconloisir {
+    text-align: center; 
+}
+
+#iconloisir img {
+    height: 1cm;
+    margin: 0.2cm;
+    fill: yellow;
+	color : white
+}
+
+#Identité {
+    grid-column: 3;
+    grid-row: 1;
+    padding: 1cm 0cm 0cm 1cm;
+}
+
+#Identité h1 {
+    margin-bottom: 0.2cm;
+}
+
+.bloc > h1 {
+    text-transform: uppercase;
+    font-size: 1.3em;
+    margin-bottom: 5px;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: gray;
+}
+
+.time {
+    text-align: right;
+    grid-column: 1;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.event {
+    margin-bottom: 0.5em;
+    display: grid;
+    grid-template-columns: 75px 50px auto;
+    grid-template-rows: 50% auto;
+}
+
+.event h1 {
+    /*font-weight: normal;*/
+    font-size: 1em;
+    margin: 0;
+    display: inline;
+    grid-column: 3;
+}
+
+.event p {
+    grid-column: 3;
+    margin: 0.1em 0 0.4em 0;
+}
+
+.colored-text {
+    color: #0CBA52;
+}
+
+@media only screen and (max-width: 21cm) {
+    body {
+        grid-template-columns: none;
+        grid-template-rows: 5cm 3cm auto auto;
+        height: initial;
+        width: initial;
+    }
+    
+#main {
+	grid-row: 4; 
+	grid-column: 1; 
+	background-color: 
+	#0CBA52; 
+	color: white
+}
+	
+#main > .bloc > h1 {
+	text-align: center; 
+	background-color: black; 
+	font-size: 1em; 
+	padding: 0.1cm; 
+	margin-bottom: 5px
+}
+	
+#Identité {
+	grid-row: 2; 
+	grid-column: 1; 
+	color: white; 
+	padding: 0; 
+	text-align: center;
+}
+    
+.colored-text {
+	color: white;
+}
+
+#sidebar {
+	grid-row: 3;
+}
